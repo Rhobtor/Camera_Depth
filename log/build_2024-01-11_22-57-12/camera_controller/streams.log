@@ -1,0 +1,29 @@
+[2.563s] Invoking command in '/root/Luis/Camera_Depth/src/camera_controller': PYTHONPATH=/root/Luis/Camera_Depth/build/camera_controller/prefix_override:/root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_controller build --build-base /root/Luis/Camera_Depth/build/camera_controller/build install --record /root/Luis/Camera_Depth/build/camera_controller/install.log --single-version-externally-managed
+[3.372s] running egg_info
+[3.376s] writing ../../build/camera_controller/camera_controller.egg-info/PKG-INFO
+[3.376s] writing dependency_links to ../../build/camera_controller/camera_controller.egg-info/dependency_links.txt
+[3.377s] writing entry points to ../../build/camera_controller/camera_controller.egg-info/entry_points.txt
+[3.378s] writing requirements to ../../build/camera_controller/camera_controller.egg-info/requires.txt
+[3.378s] writing top-level names to ../../build/camera_controller/camera_controller.egg-info/top_level.txt
+[3.386s] reading manifest file '../../build/camera_controller/camera_controller.egg-info/SOURCES.txt'
+[3.389s] writing manifest file '../../build/camera_controller/camera_controller.egg-info/SOURCES.txt'
+[3.390s] running build
+[3.390s] running build_py
+[3.391s] copying camera_controller/distance_move.py -> /root/Luis/Camera_Depth/build/camera_controller/build/lib/camera_controller
+[3.392s] running install
+[3.393s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.394s]   warnings.warn(
+[3.394s] running install_lib
+[3.399s] copying /root/Luis/Camera_Depth/build/camera_controller/build/lib/camera_controller/distance_move.py -> /root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages/camera_controller
+[3.401s] byte-compiling /root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages/camera_controller/distance_move.py to distance_move.cpython-310.pyc
+[3.405s] running install_data
+[3.407s] running install_egg_info
+[3.414s] removing '/root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages/camera_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[3.416s] Copying ../../build/camera_controller/camera_controller.egg-info to /root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages/camera_controller-0.0.0-py3.10.egg-info
+[3.419s] running install_scripts
+[3.512s] Installing distance script to /root/Luis/Camera_Depth/install/camera_controller/lib/camera_controller
+[3.513s] Installing distance_all script to /root/Luis/Camera_Depth/install/camera_controller/lib/camera_controller
+[3.513s] Installing distance_cells script to /root/Luis/Camera_Depth/install/camera_controller/lib/camera_controller
+[3.514s] Installing distance_move script to /root/Luis/Camera_Depth/install/camera_controller/lib/camera_controller
+[3.515s] writing list of installed files to '/root/Luis/Camera_Depth/build/camera_controller/install.log'
+[3.623s] Invoked command in '/root/Luis/Camera_Depth/src/camera_controller' returned '0': PYTHONPATH=/root/Luis/Camera_Depth/build/camera_controller/prefix_override:/root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_controller build --build-base /root/Luis/Camera_Depth/build/camera_controller/build install --record /root/Luis/Camera_Depth/build/camera_controller/install.log --single-version-externally-managed

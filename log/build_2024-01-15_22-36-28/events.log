@@ -1,0 +1,73 @@
+[0.000000] (-) TimerEvent: {}
+[0.001609] (camera_controller) JobQueued: {'identifier': 'camera_controller', 'dependencies': OrderedDict()}
+[0.002239] (camera_controller) JobStarted: {'identifier': 'camera_controller'}
+[0.096842] (-) TimerEvent: {}
+[0.198741] (-) TimerEvent: {}
+[0.301170] (-) TimerEvent: {}
+[0.402691] (-) TimerEvent: {}
+[0.506430] (-) TimerEvent: {}
+[0.608449] (-) TimerEvent: {}
+[0.709430] (-) TimerEvent: {}
+[0.810961] (-) TimerEvent: {}
+[0.912110] (-) TimerEvent: {}
+[1.013022] (-) TimerEvent: {}
+[1.114282] (-) TimerEvent: {}
+[1.218562] (-) TimerEvent: {}
+[1.321142] (-) TimerEvent: {}
+[1.423980] (-) TimerEvent: {}
+[1.526486] (-) TimerEvent: {}
+[1.629288] (-) TimerEvent: {}
+[1.732279] (-) TimerEvent: {}
+[1.834867] (-) TimerEvent: {}
+[1.937885] (-) TimerEvent: {}
+[2.039304] (-) TimerEvent: {}
+[2.140362] (-) TimerEvent: {}
+[2.241264] (-) TimerEvent: {}
+[2.342214] (-) TimerEvent: {}
+[2.443116] (-) TimerEvent: {}
+[2.544153] (-) TimerEvent: {}
+[2.647392] (-) TimerEvent: {}
+[2.664415] (camera_controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/camera_controller', 'build', '--build-base', '/root/Luis/Camera_Depth/build/camera_controller/build', 'install', '--record', '/root/Luis/Camera_Depth/build/camera_controller/install.log', '--single-version-externally-managed'], 'cwd': '/root/Luis/Camera_Depth/src/camera_controller', 'env': {'HOSTNAME': 'xavier-desktop', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/root/Luis', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/root/Luis/Camera_Depth/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/root/Luis/Camera_Depth/install/camera_controller:/opt/ros/humble', 'PWD': '/root/Luis/Camera_Depth/build/camera_controller', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/Luis/Camera_Depth/build/camera_controller/prefix_override:/root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages:/root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[2.747882] (-) TimerEvent: {}
+[2.849348] (-) TimerEvent: {}
+[2.950338] (-) TimerEvent: {}
+[3.051201] (-) TimerEvent: {}
+[3.152161] (-) TimerEvent: {}
+[3.253025] (-) TimerEvent: {}
+[3.353932] (-) TimerEvent: {}
+[3.456452] (-) TimerEvent: {}
+[3.545445] (camera_controller) StdoutLine: {'line': b'running egg_info\n'}
+[3.548748] (camera_controller) StdoutLine: {'line': b'writing ../../build/camera_controller/camera_controller.egg-info/PKG-INFO\n'}
+[3.549663] (camera_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/camera_controller/camera_controller.egg-info/dependency_links.txt\n'}
+[3.550682] (camera_controller) StdoutLine: {'line': b'writing entry points to ../../build/camera_controller/camera_controller.egg-info/entry_points.txt\n'}
+[3.551660] (camera_controller) StdoutLine: {'line': b'writing requirements to ../../build/camera_controller/camera_controller.egg-info/requires.txt\n'}
+[3.552346] (camera_controller) StdoutLine: {'line': b'writing top-level names to ../../build/camera_controller/camera_controller.egg-info/top_level.txt\n'}
+[3.556596] (-) TimerEvent: {}
+[3.559621] (camera_controller) StdoutLine: {'line': b"reading manifest file '../../build/camera_controller/camera_controller.egg-info/SOURCES.txt'\n"}
+[3.564228] (camera_controller) StdoutLine: {'line': b"writing manifest file '../../build/camera_controller/camera_controller.egg-info/SOURCES.txt'\n"}
+[3.565049] (camera_controller) StdoutLine: {'line': b'running build\n'}
+[3.565530] (camera_controller) StdoutLine: {'line': b'running build_py\n'}
+[3.566362] (camera_controller) StdoutLine: {'line': b'copying camera_controller/distance_move.py -> /root/Luis/Camera_Depth/build/camera_controller/build/lib/camera_controller\n'}
+[3.567671] (camera_controller) StdoutLine: {'line': b'running install\n'}
+[3.569237] (camera_controller) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[3.570056] (camera_controller) StderrLine: {'line': b'  warnings.warn(\n'}
+[3.570442] (camera_controller) StdoutLine: {'line': b'running install_lib\n'}
+[3.574566] (camera_controller) StdoutLine: {'line': b'copying /root/Luis/Camera_Depth/build/camera_controller/build/lib/camera_controller/distance_move.py -> /root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages/camera_controller\n'}
+[3.577185] (camera_controller) StdoutLine: {'line': b'byte-compiling /root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages/camera_controller/distance_move.py to distance_move.cpython-310.pyc\n'}
+[3.581255] (camera_controller) StdoutLine: {'line': b'running install_data\n'}
+[3.585298] (camera_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.591870] (camera_controller) StdoutLine: {'line': b"removing '/root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages/camera_controller-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[3.593138] (camera_controller) StdoutLine: {'line': b'Copying ../../build/camera_controller/camera_controller.egg-info to /root/Luis/Camera_Depth/install/camera_controller/lib/python3.10/site-packages/camera_controller-0.0.0-py3.10.egg-info\n'}
+[3.597016] (camera_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[3.656791] (-) TimerEvent: {}
+[3.692403] (camera_controller) StdoutLine: {'line': b'Installing distance script to /root/Luis/Camera_Depth/install/camera_controller/lib/camera_controller\n'}
+[3.693543] (camera_controller) StdoutLine: {'line': b'Installing distance_all script to /root/Luis/Camera_Depth/install/camera_controller/lib/camera_controller\n'}
+[3.694687] (camera_controller) StdoutLine: {'line': b'Installing distance_cells script to /root/Luis/Camera_Depth/install/camera_controller/lib/camera_controller\n'}
+[3.695103] (camera_controller) StdoutLine: {'line': b'Installing distance_move script to /root/Luis/Camera_Depth/install/camera_controller/lib/camera_controller\n'}
+[3.696280] (camera_controller) StdoutLine: {'line': b"writing list of installed files to '/root/Luis/Camera_Depth/build/camera_controller/install.log'\n"}
+[3.757078] (-) TimerEvent: {}
+[3.794889] (camera_controller) CommandEnded: {'returncode': 0}
+[3.857255] (-) TimerEvent: {}
+[3.959358] (-) TimerEvent: {}
+[3.975725] (camera_controller) JobEnded: {'identifier': 'camera_controller', 'rc': 0}
+[3.978702] (-) EventReactorShutdown: {}

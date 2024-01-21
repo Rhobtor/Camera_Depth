@@ -203,9 +203,6 @@ def process_dsv_file(
         # skip over empty or whitespace-only lines
         if not line.strip():
             continue
-        # skip over comments
-        if line.startswith('#'):
-            continue
         try:
             type_, remainder = line.split(';', 1)
         except ValueError:
@@ -301,8 +298,8 @@ def handle_dsv_types_except_source(type_, remainder, prefix):
                 type_ == DSV_TYPE_PREPEND_NON_DUPLICATE_IF_EXISTS and
                 not os.path.exists(value)
             ):
-                comment = f'skip extending {env_name} with not existing ' \
-                    f'path: {value}'
+                comment = 'skip extending {env_name} with not existing path: ' \
+                    '{value}'.format_map(locals())
                 if _include_comments():
                     commands.append(
                         FORMAT_STR_COMMENT_LINE.format_map({'comment': comment}))

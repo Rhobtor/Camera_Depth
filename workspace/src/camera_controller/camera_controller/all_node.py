@@ -18,11 +18,16 @@ import rclpy
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup
 from time import sleep
-from asv_interfaces.msg import Status, Nodeupdate, Location, String, Camera, Obstacles
-from asv_interfaces.srv import CommandBool
+from camera_interface.msg import Obstacles, Nodeupdate,Camera
 from rcl_interfaces.msg import Log
 from .submodulos.asv_identity import get_asv_identity
 from datetime import datetime
+from sensor_msgs.msg import Image
+from std_msgs.msg import Header
+from sensor_msgs.msg import PointCloud2, PointField
+from visualization_msgs.msg import Marker, MarkerArray
+from geometry_msgs.msg import Pose
+from threading import Lock, Thread
 import traceback
 import pyzed.sl as sl
 import cv2
@@ -56,10 +61,9 @@ class Camera_node(Node):
         self.reset_home_service = self.create_service(CommandBool, 'enable_obstacle_avoidance', self.obstacle_avoidance_enable)#### para resetear la deteccion
 #done
     def declare_topics(self):
-        self.camera_info_publisher=self.create_publisher(Obstacles, 'camera_obstacles', 10)
-        self.status_subscriber = self.create_subscription(Status, 'status', self.status_suscriber_callback, 10) ## para la camara del gps
         self.obstacles_publisher = self.create_publisher(Obstacles, 'camera_obstacles', 10)
         self.depth_publisher=self.create_publisher(Obstacles, 'camera_obstacles', 10) #### cambiar el msg
+        self.Pointcloud_publish = self.create_publisher(PointCloud2, 'spatial_map', 10)
         # timer_period = 1.0  # seconds
         # self.sonar_publisher = self.create_publisher(Sonar, 'sonar', 10)
         # self.sonar_publisher_timer = self.create_timer(timer_period, self.sonar_publish)
@@ -91,10 +95,10 @@ class Camera_node(Node):
         self.zed = sl.Camera()
         
 
-        # #define objects for threads
-        # self.lock = threading.Lock()
-        # self.run_signal = False
-        # self.stop_camera_detection=False
+        #define objects for threads
+        self.lock = threading.Lock()
+        self.run_signal = False
+        self.stop_camera_detection=False
 
 ############################################################################################################################
 ######### Create a InitParameters object and set configuration parameters ##################################################
@@ -124,23 +128,39 @@ class Camera_node(Node):
         detection_parameters_rt.detection_confidence_threshold = 70
         detection_parameters.detection_model = sl.OBJECT_DETECTION_MODEL.MULTI_CLASS_BOX  
 
+        #
+
         err = self.zed.enable_object_detection(detection_parameters)
         if err != sl.ERROR_CODE.SUCCESS :
             self.get_logger().error("obstacle detenction couldnt be initialized, closing camera")
             self.zed.close()
             return
 
+
+        # Enable spatial mapping
+        spatial_mapping_param = sl.SpatialMappingParameters()
+        spatial_mapping_param.resolution_meter = 0.1  # Set the desired spatial mapping resolution
+        spatial_mapping_param.range_meter = 10.0  # Set the desired spatial mapping range
+
+        err = self.zed.enable_spatial_mapping(spatial_mapping_param)
+        if err != sl.ERROR_CODE.SUCCESS:
+            self.get_logger().error("Spatial mapping couldn't be initialized, closing camera")
+            self.zed.close()
+            return
+
+
         #shared variables
         self.objects = sl.Objects()
         self.obj_runtime_param = sl.ObjectDetectionRuntimeParameters()
-        runtime_params = sl.RuntimeParameters()
+        self.runtime_params = sl.RuntimeParameters()
         #self.obj_runtime_param.detection_confidence_threshold = 70
-        image_left_tmp = sl.Mat()
+        self.image_left_tmp = sl.Mat()
 ###############################################################################################################################
         ## aqui no, en ASV
-        # #declare threads 
-        # self.camera_detection_thread = threading.Thread(target=self.camera_perception, args=(self.weights_filepath,self.img_size, self.confidence,)) #weights, img_size, confidence
-        # self.camera_recording_thread = threading.Thread(target=self.camera_recording)
+        # #declare threads
+         
+        self.camera_detection_thread = threading.Thread(target=self.camera_perception, args=(self.weights_filepath,self.img_size, self.confidence,)) #weights, img_size, confidence
+        self.camera_recording_thread = threading.Thread(target=self.camera_recording)
 
 
         # Open the camera
@@ -243,12 +263,6 @@ class Camera_node(Node):
     #     return response
 ########## no se puede hacer aqui el evitar obstaculo hacer en el asv y dedicar este para sacar la info de la camara como el wrapper
 
-    def status_suscriber_callback(self, msg):
-        self.status = msg
-
-
-    def mission_mode_suscriber_callback(self, msg):
-        self.mission_mode=msg.string
 #######################################################################################################
 #### DEPTH DATA########################################################################################
         
@@ -261,13 +275,23 @@ class Camera_node(Node):
             self.zed.retrieve_image(image, sl.VIEW.LEFT) # Retrieve left image
             self.zed.retrieve_measure(depth_map, sl.MEASURE.DEPTH) # Retrieve depth
 
-        # ## depth value for xy pixel
-        # depth_value = depth_map.get_value(x, y)
-        #### Display the map depth
-        depth_for_display = sl.Mat()
-        self.zed.retrieve_image(depth_for_display, sl.VIEW.DEPTH)
-        self.depth_msg=
-        self.depth_publisher.publish(self.depth_msg)
+        # Convert the depth_map to a numpy array
+        depth_data = depth_map.get_data()
+
+        # Create an Image message
+        depth_msg = Image()
+        depth_msg.header.stamp = self.get_clock().now().to_msg()
+        depth_msg.height = depth_map.get_height()
+        depth_msg.width = depth_map.get_width()
+        depth_msg.encoding = '32FC1'  # 32-bit floating point, single channel
+        depth_msg.is_bigendian = False
+        depth_msg.step = depth_map.get_width() * 4  # Assuming 32-bit float
+
+        # Flatten the depth_data and set it as the data field of the Image message
+        depth_msg.data = np.array(depth_data).astype(np.float32).tobytes()
+
+        # Publish the Image message
+        self.depth_publisher.publish(depth_msg)
 
 
     def Pointcloud_publish(self):
@@ -275,17 +299,30 @@ class Camera_node(Node):
         point_cloud = sl.Mat()
         self.zed.retrieve_measure(point_cloud, sl.MEASURE.XYZRGBA)
 
-        # Get the 3D point cloud values for pixel (i, j)
-        point3D = point_cloud.get_value(i, j)
-        x = point3D[0]
-        y = point3D[1]
-        z = point3D[2]
-        color = point3D[3]
+        # Convertir la point_cloud a una matriz numpy
+        point_cloud_data = point_cloud.get_data()
 
-        # Measure the distance of a point in the scene represented by pixel (i,j)
-        point3D = point_cloud.get_value(i, j)
-        distance = math.sqrt(point3D[0] * point3D[0] + point3D[1] * point3D[1] + point3D[2] * point3D[2])
+        # Crear un mensaje PointCloud2
+        pc_msg = PointCloud2()
+        pc_msg.header.stamp = self.get_clock().now().to_msg()
+        pc_msg.header.frame_id = 'base_link'  # Ajusta el marco de referencia según tu aplicación
+        pc_msg.height = 1
+        pc_msg.width = point_cloud.get_width() * point_cloud.get_height()
+        pc_msg.fields = [
+            PointField(name="x", offset=0, datatype=PointField.FLOAT32, count=1),
+            PointField(name="y", offset=4, datatype=PointField.FLOAT32, count=1),
+            PointField(name="z", offset=8, datatype=PointField.FLOAT32, count=1),
+        ]
+        pc_msg.is_bigendian = False
+        pc_msg.point_step = 12  # 3 floats (x, y, z) * 4 bytes each
+        pc_msg.row_step = pc_msg.point_step * pc_msg.width
+        pc_msg.is_dense = True  # Assumiendo que todos los puntos son válidos
 
+        # Flatten la matriz point_cloud_data y establecerla como el campo de datos de PointCloud2
+        pc_msg.data = np.array(point_cloud_data).astype(np.float32).tobytes()
+
+        # Publicar el mensaje PointCloud2
+        self.pointcloud_publisher.publish(pc_msg)
 
 
 
@@ -331,6 +368,37 @@ class Camera_node(Node):
 
 ##########################################################################################
 ############ OBJECT DETECTION ###############################
+
+    def obstacles_publisher(self):
+        while rclpy.ok() and not self.destroyed:
+            if self.run_signal:
+                lock.acquire()
+
+                # Convert detections to Obstacles message
+                obstacles_msg = Obstacles()
+                obstacles_msg.angle_increment = 1.5
+
+                for objeto in self.detections:
+                    obj_msg = Camera()  # Replace Camera with the actual name of your message
+                    obj_msg.id = int(objeto.label)
+                    obj_msg.label = str(objeto.label)
+                    obj_msg.position = [objeto.bounding_box_2d[0][0], objeto.bounding_box_2d[0][1], 0.0]
+                    obj_msg.confidence = objeto.probability
+                    obj_msg.dimensions = [objeto.bounding_box_2d[1][0] - objeto.bounding_box_2d[0][0],
+                                          objeto.bounding_box_2d[1][1] - objeto.bounding_box_2d[0][1], 0.0]
+                    obj_msg.velocity = [0.0, 0.0, 0.0]
+
+                    obstacles_msg.objects.append(obj_msg)
+
+                # Publish the Obstacles message
+                self.obstacles_publisher.publish(obstacles_msg)
+
+                lock.release()
+                self.run_signal = False
+
+            sleep(0.01)
+
+
     def img_preprocess(self, img, device, half, net_size):
         net_image, ratio, pad = letterbox(img[:, :, :3], net_size, auto=False)
         net_image = net_image.transpose((2, 0, 1))[::-1]  # HWC to CHW, BGR to RGB
@@ -425,7 +493,50 @@ class Camera_node(Node):
                 self.run_signal = False
             sleep(0.01)
 ##############################################################################################################################
-            
+#############################
+    def run_spatial_mapping(self):
+        spatial_mapping_params = sl.SpatialMappingParameters()
+        depth_map = sl.Mat()
+        while rclpy.ok() and not self.destroyed:
+            # Grab the left image and depth map
+            if self.zed.grab(self.runtime_params) == sl.ERROR_CODE.SUCCESS:
+                self.zed.retrieve_image(self.image_left_tmp, sl.VIEW.LEFT)
+                self.zed.retrieve_measure(depth_map, sl.MEASURE.DEPTH)
+
+                # Get the spatial map
+                err = self.zed.update_spatial_map()
+                if err == sl.ERROR_CODE.SUCCESS:
+                    # Retrieve the spatial map
+                    spatial_map = sl.Mat()
+                    self.zed.retrieve_spatial_map(spatial_map)
+
+                    # Convert spatial map to PointCloud2 ROS message
+                    pc_msg = PointCloud2()
+                    pc_msg.header.stamp = self.get_clock().now().to_msg()
+                    pc_msg.header.frame_id = 'base_link'  # Adjust the frame_id according to your application
+                    pc_msg.height = 1
+                    pc_msg.width = spatial_map.get_width() * spatial_map.get_height()
+                    pc_msg.fields = [
+                        PointField(name="x", offset=0, datatype=PointField.FLOAT32, count=1),
+                        PointField(name="y", offset=4, datatype=PointField.FLOAT32, count=1),
+                        PointField(name="z", offset=8, datatype=PointField.FLOAT32, count=1),
+                    ]
+                    pc_msg.is_bigendian = False
+                    pc_msg.point_step = 12  # 3 floats (x, y, z) * 4 bytes each
+                    pc_msg.row_step = pc_msg.point_step * pc_msg.width
+                    pc_msg.is_dense = True
+
+                    # Flatten the spatial map data and set it as the data field of the PointCloud2 message
+                    pc_msg.data = np.array(spatial_map.get_data()).astype(np.float32).tobytes()
+
+                    # Publish the PointCloud2 message
+                    self.pointcloud_publisher.publish(pc_msg)
+
+                sleep(0.01)
+
+
+####################################
+
 def main():
     rclpy.init()
     try:

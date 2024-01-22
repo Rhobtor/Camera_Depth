@@ -48,7 +48,7 @@ class ZEDNode(Node):
                 self.publish_image(image_msg, sl.VIEW.LEFT)
                 self.publish_image(depth_msg, sl.VIEW.DEPTH)
                 self.Pointcloud_publish()
-                
+                self.publish_camera_info()
                 sleep(0.01)
 
     def publish_image(self, msg, view_type):

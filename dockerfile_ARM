@@ -1,3 +1,105 @@
+# ARG IMAGE_NAME=dustynv/ros:eloquent-ros-base-l4t-r32.7.1
+
+# FROM ${IMAGE_NAME}
+
+# ARG ZED_SDK_MAJOR=4
+# ARG ZED_SDK_MINOR=0
+# ARG ZED_SDK_PATCH=7
+# ARG L4T_MAJOR=32
+# ARG L4T_MINOR=7
+
+# ARG ROS2_DIST=eloquent       # ROS2 distribution
+
+# ENV DEBIAN_FRONTEND noninteractive
+
+# # Disable apt-get warnings
+# RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 42D5A192B819C5DA || true && \
+#   apt-get update || true && apt-get install -y --no-install-recommends apt-utils dialog && \
+#   rm -rf /var/lib/apt/lists/*
+  
+# ENV TZ=Europe/Paris
+
+# RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \ 
+#   apt-get update && \
+#   apt-get install --yes lsb-release wget less udev sudo build-essential cmake python3 python3-dev python3-pip python3-wheel git jq libpq-dev zstd usbutils && \    
+#   rm -rf /var/lib/apt/lists/*
+
+
+# # # Install Python 3.8 and additional dependencies
+# # RUN apt-get update && \
+# #     apt-get install -y --no-install-recommends \
+# #     apt-utils dialog \
+# #     python3.9 python3.9-dev python3.9-distutils \
+# #     build-essential cmake python3-pip python3-wheel git jq libpq-dev zstd usbutils && \
+# #     apt-get clean && \
+# #     rm -rf /var/lib/apt/lists/*
+
+# # compile python from source - avoid unsupported library problems
+# RUN apt update -y && sudo apt upgrade -y && \
+#     apt-get install -y wget build-essential checkinstall  libreadline-gplv2-dev  libncursesw5-dev  libssl-dev  libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev && \
+#     cd /usr/src && \
+#     sudo wget https://www.python.org/ftp/python/3.9.10/Python-3.9.10.tgz && \
+#     sudo tar xzf Python-3.9.10.tgz && \
+#     cd Python-3.9.10 && \
+#     sudo ./configure --enable-optimizations && \
+#     sudo make altinstall
+
+# # Update pip and setuptools
+# RUN python3 -m pip install --upgrade pip setuptools
+
+# RUN apt-get update && \
+#     apt-get install -y \
+#         git \
+#         python3-opencv \
+#         libglib2.0-0
+
+# RUN pip3 install torch==1.10.0 torchvision==0.11.1  -f https://download.pytorch.org/whl/cu102.html
+
+
+
+# # Install the ZED SDK
+# RUN echo "# R${L4T_MAJOR} (release), REVISION: ${L4T_MINOR}" > /etc/nv_tegra_release && \
+#   apt-get update -y || true && \
+#   apt-get install -y --no-install-recommends zstd wget less cmake curl gnupg2 \
+#   build-essential python3 python3-pip python3-dev python3-setuptools libusb-1.0-0-dev -y && \
+#   pip install protobuf && \
+#   wget -q --no-check-certificate -O ZED_SDK_Linux_JP.run \
+#   https://download.stereolabs.com/zedsdk/${ZED_SDK_MAJOR}.${ZED_SDK_MINOR}/l4t${L4T_MAJOR}.${L4T_MINOR}/jetsons && \
+#   chmod +x ZED_SDK_Linux_JP.run && \
+#   ./ZED_SDK_Linux_JP.run silent drivers && \
+#   rm -rf /usr/local/zed/resources/* && \
+#   rm -rf ZED_SDK_Linux_JP.run && \
+#   rm -rf /var/lib/apt/lists/*
+
+# #This symbolic link is needed to use the streaming features on Jetson inside a container
+# RUN ln -sf /usr/lib/aarch64-linux-gnu/tegra/libv4l2.so.0 /usr/lib/aarch64-linux-gnu/libv4l2.so
+
+
+# WORKDIR /usr/local/zed
+
+# # RUN git clone https://github.com/stereolabs/zed-python-api.git --branch zedsdk_3.X
+# RUN git clone https://github.com/stereolabs/zed-python-api.git
+# WORKDIR /usr/local/zed
+
+# RUN wget https://download.stereolabs.com/zedsdk/4.0/whl/linux_aarch64/pyzed-4.0-cp36-cp36m-linux_aarch64.whl
+# RUN python3 -m pip install --ignore-installed /usr/local/zed/pyzed-4.0-cp36-cp36m-linux_aarch64.whl
+
+# ## needed to work with pỳzed in arm
+# RUN export OPENBLAS_CORETYPE=ARMV8 
+
+
+# RUN git clone https://github.com/ultralytics/yolov5
+# RUN cd yolov5 && \
+# pip3 install -U -r requirements.txt
+
+
+# # WORKDIR /home/zed_workspace
+
+# # COPY ./zed_workspace /home/zed_workspace
+
+# # RUN /bin/bash -c "source /opt/ros/eloquent/setup.bash; colcon build"
+# #por ahora no
+# # CMD ["/bin/bash", "-c", "source /opt/ros/humble/setup.bash; source install/setup.bash; ros2 launch asv_loyola_us system.launch.py"]
 ARG IMAGE_NAME=dustynv/ros:eloquent-ros-base-l4t-r32.7.1
 
 FROM ${IMAGE_NAME}
@@ -8,44 +110,48 @@ ARG ZED_SDK_PATCH=7
 ARG L4T_MAJOR=32
 ARG L4T_MINOR=7
 
-ARG ROS2_DIST=eloquent       # ROS2 distribution
+ARG ROS2_DIST=eloquent
 
 ENV DEBIAN_FRONTEND noninteractive
 
 # Disable apt-get warnings
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 42D5A192B819C5DA || true && \
-  apt-get update || true && apt-get install -y --no-install-recommends apt-utils dialog && \
-  rm -rf /var/lib/apt/lists/*
-  
+    apt-get update || true && apt-get install -y --no-install-recommends apt-utils dialog && \
+    rm -rf /var/lib/apt/lists/*
+
 ENV TZ=Europe/Paris
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \ 
-  apt-get update && \
-  apt-get install --yes lsb-release wget less udev sudo build-essential cmake python3 python3-dev python3-pip python3-wheel git jq libpq-dev zstd usbutils && \    
-  rm -rf /var/lib/apt/lists/*
+    apt-get update && \
+    apt-get install --yes lsb-release wget less udev sudo build-essential cmake python3 python3-dev python3-pip python3-wheel git jq libpq-dev zstd usbutils && \    
+    rm -rf /var/lib/apt/lists/*
 
+# Add the deadsnakes repository
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository ppa:deadsnakes/ppa
 
-# # Install Python 3.8 and additional dependencies
-# RUN apt-get update && \
-#     apt-get install -y --no-install-recommends \
-#     apt-utils dialog \
-#     python3.9 python3.9-dev python3.9-distutils \
-#     build-essential cmake python3-pip python3-wheel git jq libpq-dev zstd usbutils && \
-#     apt-get clean && \
-#     rm -rf /var/lib/apt/lists/*
+# Install Python 3.9 from source
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev && \
+    rm -rf /var/lib/apt/lists/*
 
-# compile python from source - avoid unsupported library problems
-RUN apt update -y && sudo apt upgrade -y && \
-    apt-get install -y wget build-essential checkinstall  libreadline-gplv2-dev  libncursesw5-dev  libssl-dev  libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev && \
-    cd /usr/src && \
-    sudo wget https://www.python.org/ftp/python/3.9.10/Python-3.9.10.tgz && \
-    sudo tar xzf Python-3.9.10.tgz && \
+RUN wget https://www.python.org/ftp/python/3.9.10/Python-3.9.10.tgz && \
+    tar xzf Python-3.9.10.tgz && \
     cd Python-3.9.10 && \
-    sudo ./configure --enable-optimizations && \
-    sudo make altinstall
+    ./configure --enable-optimizations && \
+    make -j$(nproc) && \
+    make install && \
+    cd .. && \
+    rm -rf Python-3.9.10* && \
+    apt-get purge -y --auto-remove \
+        build-essential libssl-dev zlib1g-dev libbz2-dev \
+        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
 
 # Update pip and setuptools
-RUN python3 -m pip install --upgrade pip setuptools
+RUN python3.9 -m pip install --upgrade pip setuptools
 
 RUN apt-get update && \
     apt-get install -y \
@@ -53,50 +159,37 @@ RUN apt-get update && \
         python3-opencv \
         libglib2.0-0
 
-RUN pip3 install torch==1.10.0 torchvision==0.11.1  -f https://download.pytorch.org/whl/cu102.html
-
-
+RUN python3.9 -m pip install torch==1.10.0 torchvision==0.11.1 -f https://download.pytorch.org/whl/cu102.html
 
 # Install the ZED SDK
 RUN echo "# R${L4T_MAJOR} (release), REVISION: ${L4T_MINOR}" > /etc/nv_tegra_release && \
-  apt-get update -y || true && \
-  apt-get install -y --no-install-recommends zstd wget less cmake curl gnupg2 \
-  build-essential python3 python3-pip python3-dev python3-setuptools libusb-1.0-0-dev -y && \
-  pip install protobuf && \
-  wget -q --no-check-certificate -O ZED_SDK_Linux_JP.run \
-  https://download.stereolabs.com/zedsdk/${ZED_SDK_MAJOR}.${ZED_SDK_MINOR}/l4t${L4T_MAJOR}.${L4T_MINOR}/jetsons && \
-  chmod +x ZED_SDK_Linux_JP.run && \
-  ./ZED_SDK_Linux_JP.run silent drivers && \
-  rm -rf /usr/local/zed/resources/* && \
-  rm -rf ZED_SDK_Linux_JP.run && \
-  rm -rf /var/lib/apt/lists/*
+    apt-get update -y || true && \
+    apt-get install -y --no-install-recommends zstd wget less cmake curl gnupg2 \
+    build-essential python3 python3-pip python3-dev python3-setuptools libusb-1.0-0-dev -y && \
+    pip install protobuf && \
+    wget -q --no-check-certificate -O ZED_SDK_Linux_JP.run \
+    https://download.stereolabs.com/zedsdk/${ZED_SDK_MAJOR}.${ZED_SDK_MINOR}/l4t${L4T_MAJOR}.${L4T_MINOR}/jetsons && \
+    chmod +x ZED_SDK_Linux_JP.run && \
+    ./ZED_SDK_Linux_JP.run silent drivers && \
+    rm -rf /usr/local/zed/resources/* && \
+    rm -rf ZED_SDK_Linux_JP.run && \
+    rm -rf /var/lib/apt/lists/*
 
-#This symbolic link is needed to use the streaming features on Jetson inside a container
-RUN ln -sf /usr/lib/aarch64-linux-gnu/tegra/libv4l2.so.0 /usr/lib/aarch64-linux-gnu/libv4l2.so
-
+# This symbolic link is needed to use the streaming features on Jetson inside a container
+RUN ln -sf /usr/lib/aarch64-linux-gnu/tegra/libv4l2.so /usr/lib/aarch64-linux-gnu/libv4l2.so
 
 WORKDIR /usr/local/zed
 
-# RUN git clone https://github.com/stereolabs/zed-python-api.git --branch zedsdk_3.X
 RUN git clone https://github.com/stereolabs/zed-python-api.git
 WORKDIR /usr/local/zed
 
-RUN wget https://download.stereolabs.com/zedsdk/4.0/whl/linux_aarch64/pyzed-4.0-cp36-cp36m-linux_aarch64.whl
-RUN python3 -m pip install --ignore-installed /usr/local/zed/pyzed-4.0-cp36-cp36m-linux_aarch64.whl
+RUN wget https://download.stereolabs.com/zedsdk/4.0/whl/linux_aarch64/pyzed-4.0-cp39-cp39-linux_aarch64.whl
+RUN python3 -m pip install --ignore-installed /usr/local/zed/pyzed-4.0-cp39-cp39-linux_aarch64.whl
 
-## needed to work with pỳzed in arm
-RUN export OPENBLAS_CORETYPE=ARMV8 
-
+# Needed to work with pyzed on ARM
+ENV OPENBLAS_CORETYPE=ARMV8 
 
 RUN git clone https://github.com/ultralytics/yolov5
-RUN cd yolov5 && \
-pip3 install -U -r requirements.txt
+WORKDIR /usr/local/zed/yolov5
 
-
-# WORKDIR /home/zed_workspace
-
-# COPY ./zed_workspace /home/zed_workspace
-
-# RUN /bin/bash -c "source /opt/ros/eloquent/setup.bash; colcon build"
-#por ahora no
-# CMD ["/bin/bash", "-c", "source /opt/ros/humble/setup.bash; source install/setup.bash; ros2 launch asv_loyola_us system.launch.py"]
+RUN pip3 install -U -r requirements.txt

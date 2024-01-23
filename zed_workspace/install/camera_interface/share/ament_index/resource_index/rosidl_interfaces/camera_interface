@@ -1,0 +1,6 @@
+msg/Camera.idl
+msg/Camera.msg
+msg/Nodeupdate.idl
+msg/Nodeupdate.msg
+msg/Obstacles.idl
+msg/Obstacles.msg

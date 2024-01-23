@@ -20,10 +20,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'distance=camera_controller.distance:main',
+            'camera_node=camera_controller.camera_node:main',
             'distance_move=camera_controller.distance_move:main',
             'distance_cells=camera_controller.distnce_move:main',
-            'distance_all=camera_controller.distance_all:main',
+            'Zed_node=camera_controller.Zed_node:main',
         ],
     },
 )

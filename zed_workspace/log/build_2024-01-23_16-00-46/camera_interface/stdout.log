@@ -1,0 +1,242 @@
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.8.3 (/opt/ros/eloquent/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rosidl_default_generators: 0.8.0 (/opt/ros/eloquent/share/rosidl_default_generators/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1") 
+-- Found FastRTPS: /opt/ros/eloquent/include  
+-- Found rosidl_adapter: 0.8.3 (/opt/ros/eloquent/share/rosidl_adapter/cmake)
+-- Found geometry_msgs: 0.8.1 (/opt/ros/eloquent/share/geometry_msgs/cmake)
+-- Found sensor_msgs: 0.8.1 (/opt/ros/eloquent/share/sensor_msgs/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found version "3.6.9") 
+-- Using single matching rosidl_typesupport_c: rosidl_typesupport_fastrtps_c
+-- Using single matching rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 0.8.1 (/opt/ros/eloquent/share/rmw_implementation_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.0 (/opt/ros/eloquent/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.6m.so (found suitable version "3.6.9", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.6m
+-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.6m.so
+-- Found PythonExtra: .so  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface
+[35m[1mScanning dependencies of target camera_interface__cpp[0m
+[  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  4%] Built target camera_interface__cpp
+[  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[  8%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[35m[1mScanning dependencies of target camera_interface__rosidl_generator_c[0m
+[ 11%] [32mBuilding C object CMakeFiles/camera_interface__rosidl_generator_c.dir/rosidl_generator_c/camera_interface/msg/obstacles__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/camera_interface__rosidl_generator_c.dir/rosidl_generator_c/camera_interface/msg/camera__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/camera_interface__rosidl_generator_c.dir/rosidl_generator_c/camera_interface/msg/nodeupdate__functions.c.o[0m
+[ 17%] [32m[1mLinking C shared library libcamera_interface__rosidl_generator_c.so[0m
+[ 17%] Built target camera_interface__rosidl_generator_c
+[ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[35m[1mScanning dependencies of target camera_interface__rosidl_typesupport_introspection_cpp[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/camera_interface/msg/camera__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/camera_interface/msg/obstacles__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/camera_interface/msg/nodeupdate__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target camera_interface__rosidl_typesupport_fastrtps_cpp[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/camera_interface/msg/dds_fastrtps/obstacles__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/camera_interface/msg/dds_fastrtps/camera__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target camera_interface__rosidl_typesupport_introspection_c[0m
+[ 33%] [32mBuilding C object CMakeFiles/camera_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/camera_interface/msg/camera__type_support.c.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/camera_interface/msg/dds_fastrtps/nodeupdate__type_support.cpp.o[0m
+[ 37%] [32mBuilding C object CMakeFiles/camera_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/camera_interface/msg/obstacles__type_support.c.o[0m
+[ 40%] [32mBuilding C object CMakeFiles/camera_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/camera_interface/msg/nodeupdate__type_support.c.o[0m
+[ 42%] [32m[1mLinking CXX shared library libcamera_interface__rosidl_typesupport_introspection_cpp.so[0m
+[ 44%] [32m[1mLinking C shared library libcamera_interface__rosidl_typesupport_introspection_c.so[0m
+[ 44%] Built target camera_interface__rosidl_typesupport_introspection_c
+[ 44%] Built target camera_interface__rosidl_typesupport_introspection_cpp
+[ 46%] [32m[1mLinking CXX shared library libcamera_interface__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 46%] Built target camera_interface__rosidl_typesupport_fastrtps_cpp
+[ 48%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 51%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[35m[1mScanning dependencies of target camera_interface__rosidl_typesupport_cpp[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/camera_interface/msg/camera__type_support.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/camera_interface/msg/obstacles__type_support.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/camera_interface/msg/nodeupdate__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target camera_interface__rosidl_typesupport_fastrtps_c[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/camera_interface/msg/camera__type_support_c.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/camera_interface/msg/obstacles__type_support_c.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/camera_interface/msg/nodeupdate__type_support_c.cpp.o[0m
+[ 66%] [32m[1mLinking CXX shared library libcamera_interface__rosidl_typesupport_cpp.so[0m
+[ 68%] [32m[1mLinking CXX shared library libcamera_interface__rosidl_typesupport_fastrtps_c.so[0m
+[ 68%] Built target camera_interface__rosidl_typesupport_cpp
+[ 68%] Built target camera_interface__rosidl_typesupport_fastrtps_c
+[ 71%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[35m[1mScanning dependencies of target camera_interface__rosidl_typesupport_c[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/camera_interface/msg/obstacles__type_support.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/camera_interface/msg/camera__type_support.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/camera_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/camera_interface/msg/nodeupdate__type_support.cpp.o[0m
+[ 80%] [32m[1mLinking CXX shared library libcamera_interface__rosidl_typesupport_c.so[0m
+[ 80%] Built target camera_interface__rosidl_typesupport_c
+[35m[1mScanning dependencies of target camera_interface[0m
+[ 80%] Built target camera_interface
+[35m[1mScanning dependencies of target camera_interface__py[0m
+[ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 82%] Built target camera_interface__py
+[35m[1mScanning dependencies of target camera_interface__python[0m
+[ 84%] [32mBuilding C object CMakeFiles/camera_interface__python.dir/rosidl_generator_py/camera_interface/msg/_camera_s.c.o[0m
+[ 86%] [32mBuilding C object CMakeFiles/camera_interface__python.dir/rosidl_generator_py/camera_interface/msg/_nodeupdate_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/camera_interface__python.dir/rosidl_generator_py/camera_interface/msg/_obstacles_s.c.o[0m
+[ 91%] [32m[1mLinking CXX shared library rosidl_generator_py/camera_interface/libcamera_interface__python.so[0m
+[ 91%] Built target camera_interface__python
+[35m[1mScanning dependencies of target camera_interface__rosidl_typesupport_c__pyext[0m
+[35m[1mScanning dependencies of target camera_interface__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 93%] [32mBuilding C object CMakeFiles/camera_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/camera_interface/_camera_interface_s.ep.rosidl_typesupport_c.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/camera_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/camera_interface/_camera_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 97%] [32m[1mLinking CXX shared library rosidl_generator_py/camera_interface/camera_interface_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so[0m
+[100%] [32m[1mLinking CXX shared library rosidl_generator_py/camera_interface/camera_interface_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so[0m
+[100%] Built target camera_interface__rosidl_typesupport_c__pyext
+[100%] Built target camera_interface__rosidl_typesupport_fastrtps_c__pyext
+[  2%] Built target camera_interface__cpp
+[ 13%] Built target camera_interface__rosidl_generator_c
+[ 24%] Built target camera_interface__rosidl_typesupport_introspection_cpp
+[ 35%] Built target camera_interface__rosidl_typesupport_fastrtps_cpp
+[ 46%] Built target camera_interface__rosidl_typesupport_introspection_c
+[ 64%] Built target camera_interface__rosidl_typesupport_fastrtps_c
+[ 68%] Built target camera_interface__rosidl_typesupport_cpp
+[ 80%] Built target camera_interface__rosidl_typesupport_c
+[ 80%] Built target camera_interface
+[ 82%] Built target camera_interface__py
+[ 91%] Built target camera_interface__python
+[100%] Built target camera_interface__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target camera_interface__rosidl_typesupport_c__pyext
+[36mInstall the project...[0m
+-- Install configuration: ""
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/rosidl_interfaces/camera_interface
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_c.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_c.so" to ""
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/library_path.sh
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/library_path.dsv
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_cpp.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_cpp.so" to ""
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_fastrtps_c.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_fastrtps_c.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_fastrtps_c.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__struct.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__struct.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__functions.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__functions.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__functions.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__struct.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__functions.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__functions.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__functions.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_generator_c.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_generator_c.so" to ""
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/dds_fastrtps
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__traits.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__traits.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__struct.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__traits.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__struct.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__struct.hpp
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_introspection_c.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_introspection_c.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_introspection_c.h
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_introspection_c.so" to ""
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.cpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.cpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.cpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/pythonpath.sh
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/pythonpath.dsv
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/__init__.py
+Compiling '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/__init__.py'...
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_camera_s.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_camera.py
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_obstacles_s.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_nodeupdate_s.c
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/__init__.py
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_obstacles.py
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_nodeupdate.py
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/camera_interface_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/camera_interface_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so" to ""
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/camera_interface_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/camera_interface_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so" to ""
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__python.so
+-- Set runtime path of "/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__python.so" to ""
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Camera.idl
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Obstacles.idl
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Nodeupdate.idl
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Camera.msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Obstacles.msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Nodeupdate.msg
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/package_run_dependencies/camera_interface
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/parent_prefix_path/camera_interface
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/ament_prefix_path.sh
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/ament_prefix_path.dsv
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/path.sh
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/path.dsv
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.bash
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.sh
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.zsh
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.dsv
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/package.dsv
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/packages/camera_interface
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/rosidl_cmake-extras.cmake
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/camera_interfaceConfig.cmake
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/camera_interfaceConfig-version.cmake
+-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/package.xml

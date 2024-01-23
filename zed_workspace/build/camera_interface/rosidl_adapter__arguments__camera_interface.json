@@ -1,0 +1,8 @@
+{
+  "package_name": "camera_interface",
+  "non_idl_tuples": [
+    "/root/Luis/camera_zed/Camera_Depth/zed_workspace/src/camera_interface:msg/Camera.msg",
+    "/root/Luis/camera_zed/Camera_Depth/zed_workspace/src/camera_interface:msg/Obstacles.msg",
+    "/root/Luis/camera_zed/Camera_Depth/zed_workspace/src/camera_interface:msg/Nodeupdate.msg"
+  ]
+}

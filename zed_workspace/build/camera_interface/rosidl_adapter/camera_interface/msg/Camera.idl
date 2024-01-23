@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from camera_interface/msg/Camera.msg
+// generated code does not contain a copyright notice
+
+
+module camera_interface {
+  module msg {
+    struct Camera {
+      int64 id;
+
+      string label;
+
+      sequence<double> position;
+
+      double confidence;
+
+      sequence<double> dimensions;
+
+      sequence<double> velocity;
+    };
+  };
+};

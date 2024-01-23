@@ -1,0 +1,140 @@
+[0.063s] Invoking command in '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_controller:/opt/ros/eloquent /usr/bin/cmake --build /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface -- -j6 -l6
+[0.318s] [  2%] Built target camera_interface__cpp
+[0.324s] [ 13%] Built target camera_interface__rosidl_generator_c
+[0.432s] [ 24%] Built target camera_interface__rosidl_typesupport_introspection_cpp
+[0.447s] [ 35%] Built target camera_interface__rosidl_typesupport_fastrtps_cpp
+[0.448s] [ 46%] Built target camera_interface__rosidl_typesupport_introspection_c
+[0.563s] [ 57%] Built target camera_interface__rosidl_typesupport_cpp
+[0.572s] [ 68%] Built target camera_interface__rosidl_typesupport_fastrtps_c
+[0.697s] [ 80%] Built target camera_interface__rosidl_typesupport_c
+[0.781s] [ 80%] Built target camera_interface
+[0.869s] [ 82%] Built target camera_interface__py
+[0.983s] [ 91%] Built target camera_interface__python
+[1.098s] [100%] Built target camera_interface__rosidl_typesupport_c__pyext
+[1.098s] [100%] Built target camera_interface__rosidl_typesupport_fastrtps_c__pyext
+[1.145s] Invoked command in '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_controller:/opt/ros/eloquent /usr/bin/cmake --build /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface -- -j6 -l6
+[1.541s] Invoking command in '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_controller:/opt/ros/eloquent /usr/bin/cmake --build /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface --target install -- -j6 -l6
+[1.756s] [  2%] Built target camera_interface__cpp
+[1.775s] [ 13%] Built target camera_interface__rosidl_generator_c
+[1.871s] [ 24%] Built target camera_interface__rosidl_typesupport_introspection_cpp
+[1.881s] [ 35%] Built target camera_interface__rosidl_typesupport_fastrtps_cpp
+[1.889s] [ 46%] Built target camera_interface__rosidl_typesupport_introspection_c
+[2.003s] [ 62%] Built target camera_interface__rosidl_typesupport_fastrtps_c
+[2.004s] [ 68%] Built target camera_interface__rosidl_typesupport_cpp
+[2.134s] [ 80%] Built target camera_interface__rosidl_typesupport_c
+[2.219s] [ 80%] Built target camera_interface
+[2.308s] [ 82%] Built target camera_interface__py
+[2.429s] [ 91%] Built target camera_interface__python
+[2.541s] [ 97%] Built target camera_interface__rosidl_typesupport_c__pyext
+[2.542s] [100%] Built target camera_interface__rosidl_typesupport_fastrtps_c__pyext
+[2.617s] [36mInstall the project...[0m
+[2.653s] -- Install configuration: ""
+[2.654s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/rosidl_interfaces/camera_interface
+[2.654s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_c.so
+[2.655s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/library_path.sh
+[2.656s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/library_path.dsv
+[2.657s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_cpp.so
+[2.658s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+[2.658s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+[2.659s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.661s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_fastrtps_c.h
+[2.662s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_fastrtps_c.h
+[2.662s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_fastrtps_c.h
+[2.663s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_fastrtps_c.so
+[2.664s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+[2.665s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+[2.665s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__struct.h
+[2.667s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__struct.h
+[2.668s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__functions.h
+[2.668s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles.h
+[2.669s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__functions.c
+[2.669s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.h
+[2.670s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.h
+[2.671s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__functions.h
+[2.671s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_generator_c__visibility_control.h
+[2.672s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__struct.h
+[2.673s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate.h
+[2.673s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera.h
+[2.674s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__functions.c
+[2.674s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.h
+[2.675s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__functions.h
+[2.675s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__functions.c
+[2.676s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_generator_c.so
+[2.676s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+[2.677s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+[2.677s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_fastrtps_cpp.hpp
+[2.678s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.678s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_fastrtps_cpp.hpp
+[2.679s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_fastrtps_cpp.hpp
+[2.679s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/dds_fastrtps
+[2.680s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_fastrtps_cpp.so
+[2.680s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+[2.680s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+[2.681s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate.hpp
+[2.681s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__traits.hpp
+[2.682s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles.hpp
+[2.682s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__traits.hpp
+[2.683s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera.hpp
+[2.683s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__struct.hpp
+[2.683s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__traits.hpp
+[2.684s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__struct.hpp
+[2.684s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__struct.hpp
+[2.685s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+[2.685s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+[2.685s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.686s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_introspection_c.h
+[2.686s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.c
+[2.687s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.c
+[2.687s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_introspection_c.h
+[2.687s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_introspection_c.h
+[2.688s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.c
+[2.688s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_introspection_c.so
+[2.689s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface
+[2.689s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg
+[2.690s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.cpp
+[2.690s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_introspection_cpp.hpp
+[2.690s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.cpp
+[2.691s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_introspection_cpp.hpp
+[2.691s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.cpp
+[2.692s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_introspection_cpp.hpp
+[2.692s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_introspection_cpp.so
+[2.692s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/pythonpath.sh
+[2.693s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/pythonpath.dsv
+[2.693s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/__init__.py
+[2.823s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg
+[2.824s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_camera_s.c
+[2.824s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_camera.py
+[2.825s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_obstacles_s.c
+[2.826s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_nodeupdate_s.c
+[2.826s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/__init__.py
+[2.827s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_obstacles.py
+[2.827s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_nodeupdate.py
+[2.828s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/camera_interface_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so
+[2.828s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/camera_interface_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so
+[2.830s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__python.so
+[2.831s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Camera.idl
+[2.832s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Obstacles.idl
+[2.833s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Nodeupdate.idl
+[2.834s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Camera.msg
+[2.835s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Obstacles.msg
+[2.836s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Nodeupdate.msg
+[2.837s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/package_run_dependencies/camera_interface
+[2.838s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/parent_prefix_path/camera_interface
+[2.838s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/ament_prefix_path.sh
+[2.839s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/ament_prefix_path.dsv
+[2.840s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/path.sh
+[2.840s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/path.dsv
+[2.841s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.bash
+[2.841s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.sh
+[2.842s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.zsh
+[2.842s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.dsv
+[2.843s] -- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/package.dsv
+[2.843s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/packages/camera_interface
+[2.844s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/rosidl_cmake-extras.cmake
+[2.844s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.845s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[2.845s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.846s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/camera_interfaceConfig.cmake
+[2.846s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/camera_interfaceConfig-version.cmake
+[2.846s] -- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/package.xml
+[2.867s] Invoked command in '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_controller:/opt/ros/eloquent /usr/bin/cmake --build /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface --target install -- -j6 -l6

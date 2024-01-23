@@ -20,7 +20,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from time import sleep
 from camera_interface.msg import Obstacles, Nodeupdate,Camera
 from rcl_interfaces.msg import Log
-from .submodulos.asv_identity import get_asv_identity
+# from submodulos.asv_identity import get_asv_identity
 from datetime import datetime
 from sensor_msgs.msg import Image
 from std_msgs.msg import Header
@@ -45,7 +45,7 @@ from utils.augmentations import letterbox
 class Camera_node(Node):
 
     def parameters(self):
-        self.vehicle_id = get_asv_identity()
+        # self.vehicle_id = get_asv_identity()
         self.declare_parameter('img_size', 640)
         self.img_size = self.get_parameter('img_size').get_parameter_value().integer_value
         self.declare_parameter('enable_obstacle_avoidance', True)
@@ -78,7 +78,7 @@ class Camera_node(Node):
         self.parameters()
 
         #declare variables
-        self.status=Status()
+        
         self.recording=False
 
         #call services
@@ -137,16 +137,16 @@ class Camera_node(Node):
             return
 
 
-        # Enable spatial mapping
-        spatial_mapping_param = sl.SpatialMappingParameters()
-        spatial_mapping_param.resolution_meter = 0.1  # Set the desired spatial mapping resolution
-        spatial_mapping_param.range_meter = 10.0  # Set the desired spatial mapping range
+        # # Enable spatial mapping
+        # spatial_mapping_param = sl.SpatialMappingParameters()
+        # spatial_mapping_param.resolution_meter = 0.1  # Set the desired spatial mapping resolution
+        # spatial_mapping_param.range_meter = 10.0  # Set the desired spatial mapping range
 
-        err = self.zed.enable_spatial_mapping(spatial_mapping_param)
-        if err != sl.ERROR_CODE.SUCCESS:
-            self.get_logger().error("Spatial mapping couldn't be initialized, closing camera")
-            self.zed.close()
-            return
+        # err = self.zed.enable_spatial_mapping(spatial_mapping_param)
+        # if err != sl.ERROR_CODE.SUCCESS:
+        #     self.get_logger().error("Spatial mapping couldn't be initialized, closing camera")
+        #     self.zed.close()
+        #     return
 
 
         #shared variables
@@ -369,34 +369,34 @@ class Camera_node(Node):
 ##########################################################################################
 ############ OBJECT DETECTION ###############################
 
-    def obstacles_publisher(self):
-        while rclpy.ok() and not self.destroyed:
-            if self.run_signal:
-                lock.acquire()
+    # def obstacles_publisher(self):
+    #     while rclpy.ok() and not self.destroyed:
+    #         if self.run_signal:
+    #             lock.acquire()
 
-                # Convert detections to Obstacles message
-                obstacles_msg = Obstacles()
-                obstacles_msg.angle_increment = 1.5
+    #             # Convert detections to Obstacles message
+    #             obstacles_msg = Obstacles()
+    #             obstacles_msg.angle_increment = 1.5
 
-                for objeto in self.detections:
-                    obj_msg = Camera()  # Replace Camera with the actual name of your message
-                    obj_msg.id = int(objeto.label)
-                    obj_msg.label = str(objeto.label)
-                    obj_msg.position = [objeto.bounding_box_2d[0][0], objeto.bounding_box_2d[0][1], 0.0]
-                    obj_msg.confidence = objeto.probability
-                    obj_msg.dimensions = [objeto.bounding_box_2d[1][0] - objeto.bounding_box_2d[0][0],
-                                          objeto.bounding_box_2d[1][1] - objeto.bounding_box_2d[0][1], 0.0]
-                    obj_msg.velocity = [0.0, 0.0, 0.0]
+    #             for objeto in self.detections:
+    #                 obj_msg = Camera()  # Replace Camera with the actual name of your message
+    #                 obj_msg.id = int(objeto.label)
+    #                 obj_msg.label = str(objeto.label)
+    #                 obj_msg.position = [objeto.bounding_box_2d[0][0], objeto.bounding_box_2d[0][1], 0.0]
+    #                 obj_msg.confidence = objeto.probability
+    #                 obj_msg.dimensions = [objeto.bounding_box_2d[1][0] - objeto.bounding_box_2d[0][0],
+    #                                       objeto.bounding_box_2d[1][1] - objeto.bounding_box_2d[0][1], 0.0]
+    #                 obj_msg.velocity = [0.0, 0.0, 0.0]
 
-                    obstacles_msg.objects.append(obj_msg)
+    #                 obstacles_msg.objects.append(obj_msg)
 
-                # Publish the Obstacles message
-                self.obstacles_publisher.publish(obstacles_msg)
+    #             # Publish the Obstacles message
+    #             self.obstacles_publisher.publish(obstacles_msg)
 
-                lock.release()
-                self.run_signal = False
+    #             lock.release()
+    #             self.run_signal = False
 
-            sleep(0.01)
+    #         sleep(0.01)
 
 
     def img_preprocess(self, img, device, half, net_size):
@@ -494,45 +494,45 @@ class Camera_node(Node):
             sleep(0.01)
 ##############################################################################################################################
 #############################
-    def run_spatial_mapping(self):
-        spatial_mapping_params = sl.SpatialMappingParameters()
-        depth_map = sl.Mat()
-        while rclpy.ok() and not self.destroyed:
-            # Grab the left image and depth map
-            if self.zed.grab(self.runtime_params) == sl.ERROR_CODE.SUCCESS:
-                self.zed.retrieve_image(self.image_left_tmp, sl.VIEW.LEFT)
-                self.zed.retrieve_measure(depth_map, sl.MEASURE.DEPTH)
+    # def run_spatial_mapping(self):
+    #     spatial_mapping_params = sl.SpatialMappingParameters()
+    #     depth_map = sl.Mat()
+    #     while rclpy.ok() and not self.destroyed:
+    #         # Grab the left image and depth map
+    #         if self.zed.grab(self.runtime_params) == sl.ERROR_CODE.SUCCESS:
+    #             self.zed.retrieve_image(self.image_left_tmp, sl.VIEW.LEFT)
+    #             self.zed.retrieve_measure(depth_map, sl.MEASURE.DEPTH)
 
-                # Get the spatial map
-                err = self.zed.update_spatial_map()
-                if err == sl.ERROR_CODE.SUCCESS:
-                    # Retrieve the spatial map
-                    spatial_map = sl.Mat()
-                    self.zed.retrieve_spatial_map(spatial_map)
+    #             # Get the spatial map
+    #             err = self.zed.update_spatial_map()
+    #             if err == sl.ERROR_CODE.SUCCESS:
+    #                 # Retrieve the spatial map
+    #                 spatial_map = sl.Mat()
+    #                 self.zed.retrieve_spatial_map(spatial_map)
 
-                    # Convert spatial map to PointCloud2 ROS message
-                    pc_msg = PointCloud2()
-                    pc_msg.header.stamp = self.get_clock().now().to_msg()
-                    pc_msg.header.frame_id = 'base_link'  # Adjust the frame_id according to your application
-                    pc_msg.height = 1
-                    pc_msg.width = spatial_map.get_width() * spatial_map.get_height()
-                    pc_msg.fields = [
-                        PointField(name="x", offset=0, datatype=PointField.FLOAT32, count=1),
-                        PointField(name="y", offset=4, datatype=PointField.FLOAT32, count=1),
-                        PointField(name="z", offset=8, datatype=PointField.FLOAT32, count=1),
-                    ]
-                    pc_msg.is_bigendian = False
-                    pc_msg.point_step = 12  # 3 floats (x, y, z) * 4 bytes each
-                    pc_msg.row_step = pc_msg.point_step * pc_msg.width
-                    pc_msg.is_dense = True
+    #                 # Convert spatial map to PointCloud2 ROS message
+    #                 pc_msg = PointCloud2()
+    #                 pc_msg.header.stamp = self.get_clock().now().to_msg()
+    #                 pc_msg.header.frame_id = 'base_link'  # Adjust the frame_id according to your application
+    #                 pc_msg.height = 1
+    #                 pc_msg.width = spatial_map.get_width() * spatial_map.get_height()
+    #                 pc_msg.fields = [
+    #                     PointField(name="x", offset=0, datatype=PointField.FLOAT32, count=1),
+    #                     PointField(name="y", offset=4, datatype=PointField.FLOAT32, count=1),
+    #                     PointField(name="z", offset=8, datatype=PointField.FLOAT32, count=1),
+    #                 ]
+    #                 pc_msg.is_bigendian = False
+    #                 pc_msg.point_step = 12  # 3 floats (x, y, z) * 4 bytes each
+    #                 pc_msg.row_step = pc_msg.point_step * pc_msg.width
+    #                 pc_msg.is_dense = True
 
-                    # Flatten the spatial map data and set it as the data field of the PointCloud2 message
-                    pc_msg.data = np.array(spatial_map.get_data()).astype(np.float32).tobytes()
+    #                 # Flatten the spatial map data and set it as the data field of the PointCloud2 message
+    #                 pc_msg.data = np.array(spatial_map.get_data()).astype(np.float32).tobytes()
 
-                    # Publish the PointCloud2 message
-                    self.pointcloud_publisher.publish(pc_msg)
+    #                 # Publish the PointCloud2 message
+    #                 self.pointcloud_publisher.publish(pc_msg)
 
-                sleep(0.01)
+    #             sleep(0.01)
 
 
 ####################################

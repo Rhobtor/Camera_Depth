@@ -1,0 +1,253 @@
+[0.000000] (-) TimerEvent: {}
+[0.002345] (camera_interface) JobQueued: {'identifier': 'camera_interface', 'dependencies': OrderedDict()}
+[0.003871] (camera_controller) JobQueued: {'identifier': 'camera_controller', 'dependencies': OrderedDict([('camera_interface', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface')])}
+[0.004540] (camera_interface) JobStarted: {'identifier': 'camera_interface'}
+[0.052161] (camera_interface) JobProgress: {'identifier': 'camera_interface', 'progress': 'cmake'}
+[0.057639] (camera_interface) JobProgress: {'identifier': 'camera_interface', 'progress': 'build'}
+[0.062341] (camera_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface', '--', '-j6', '-l6'], 'cwd': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'xavier-desktop'), ('LD_LIBRARY_PATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib:/home/zed_workspace/install/camera_interface/lib:/usr/lib/aarch64-linux-gnu/gazebo-9/plugins:/opt/ros/eloquent/opt/yaml_cpp_vendor/lib:/opt/ros/eloquent/lib/aarch64-linux-gnu:/opt/ros/eloquent/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/root/Luis/camera_zed/Camera_Depth'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install:/home/zed_workspace/install'), ('ROS_DISTRO', 'eloquent'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/eloquent/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/eloquent'), ('AMENT_PREFIX_PATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface:/home/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_interface:/opt/ros/eloquent'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface'), ('PYTHONPATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/home/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/home/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/opt/ros/eloquent/lib/python3.6/site-packages'), ('TZ', 'Europe/Paris'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface:/home/zed_workspace/install/camera_interface:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_controller:/opt/ros/eloquent')]), 'shell': False}
+[0.098965] (-) TimerEvent: {}
+[0.201478] (-) TimerEvent: {}
+[0.303943] (-) TimerEvent: {}
+[0.316612] (camera_interface) StdoutLine: {'line': b'[  2%] Built target camera_interface__cpp\n'}
+[0.328319] (camera_interface) StdoutLine: {'line': b'[ 13%] Built target camera_interface__rosidl_generator_c\n'}
+[0.404213] (-) TimerEvent: {}
+[0.436357] (camera_interface) StdoutLine: {'line': b'[ 24%] Built target camera_interface__rosidl_typesupport_introspection_cpp\n'}
+[0.440127] (camera_interface) StdoutLine: {'line': b'[ 35%] Built target camera_interface__rosidl_typesupport_fastrtps_cpp\n'}
+[0.452478] (camera_interface) StdoutLine: {'line': b'[ 46%] Built target camera_interface__rosidl_typesupport_introspection_c\n'}
+[0.504480] (-) TimerEvent: {}
+[0.566742] (camera_interface) StdoutLine: {'line': b'[ 57%] Built target camera_interface__rosidl_typesupport_cpp\n'}
+[0.576337] (camera_interface) StdoutLine: {'line': b'[ 68%] Built target camera_interface__rosidl_typesupport_fastrtps_c\n'}
+[0.604728] (-) TimerEvent: {}
+[0.701313] (camera_interface) StdoutLine: {'line': b'[ 80%] Built target camera_interface__rosidl_typesupport_c\n'}
+[0.704905] (-) TimerEvent: {}
+[0.783043] (camera_interface) StdoutLine: {'line': b'[ 80%] Built target camera_interface\n'}
+[0.805162] (-) TimerEvent: {}
+[0.871256] (camera_interface) StdoutLine: {'line': b'[ 82%] Built target camera_interface__py\n'}
+[0.905409] (-) TimerEvent: {}
+[0.986717] (camera_interface) StdoutLine: {'line': b'[ 91%] Built target camera_interface__python\n'}
+[1.005665] (-) TimerEvent: {}
+[1.101446] (camera_interface) StdoutLine: {'line': b'[100%] Built target camera_interface__rosidl_typesupport_c__pyext\n'}
+[1.102684] (camera_interface) StdoutLine: {'line': b'[100%] Built target camera_interface__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.105837] (-) TimerEvent: {}
+[1.146503] (camera_interface) CommandEnded: {'returncode': 0}
+[1.206556] (-) TimerEvent: {}
+[1.308800] (-) TimerEvent: {}
+[1.411461] (-) TimerEvent: {}
+[1.490981] (camera_interface) JobProgress: {'identifier': 'camera_interface', 'progress': 'install'}
+[1.512071] (-) TimerEvent: {}
+[1.534332] (camera_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface', '--target', 'install', '--', '-j6', '-l6'], 'cwd': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'xavier-desktop'), ('LD_LIBRARY_PATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib:/home/zed_workspace/install/camera_interface/lib:/usr/lib/aarch64-linux-gnu/gazebo-9/plugins:/opt/ros/eloquent/opt/yaml_cpp_vendor/lib:/opt/ros/eloquent/lib/aarch64-linux-gnu:/opt/ros/eloquent/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:'), ('SHLVL', '1'), ('OLDPWD', '/root/Luis/camera_zed/Camera_Depth'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install:/home/zed_workspace/install'), ('ROS_DISTRO', 'eloquent'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/eloquent/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/eloquent'), ('AMENT_PREFIX_PATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface:/home/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_interface:/opt/ros/eloquent'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_interface'), ('PYTHONPATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/home/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/home/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/opt/ros/eloquent/lib/python3.6/site-packages'), ('TZ', 'Europe/Paris'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface:/home/zed_workspace/install/camera_interface:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_controller:/opt/ros/eloquent')]), 'shell': False}
+[1.612206] (-) TimerEvent: {}
+[1.713966] (-) TimerEvent: {}
+[1.760077] (camera_interface) StdoutLine: {'line': b'[  2%] Built target camera_interface__cpp\n'}
+[1.778951] (camera_interface) StdoutLine: {'line': b'[ 13%] Built target camera_interface__rosidl_generator_c\n'}
+[1.814259] (-) TimerEvent: {}
+[1.874373] (camera_interface) StdoutLine: {'line': b'[ 24%] Built target camera_interface__rosidl_typesupport_introspection_cpp\n'}
+[1.885381] (camera_interface) StdoutLine: {'line': b'[ 35%] Built target camera_interface__rosidl_typesupport_fastrtps_cpp\n'}
+[1.893504] (camera_interface) StdoutLine: {'line': b'[ 46%] Built target camera_interface__rosidl_typesupport_introspection_c\n'}
+[1.914494] (-) TimerEvent: {}
+[2.006940] (camera_interface) StdoutLine: {'line': b'[ 62%] Built target camera_interface__rosidl_typesupport_fastrtps_c\n'}
+[2.007798] (camera_interface) StdoutLine: {'line': b'[ 68%] Built target camera_interface__rosidl_typesupport_cpp\n'}
+[2.014737] (-) TimerEvent: {}
+[2.116528] (-) TimerEvent: {}
+[2.138520] (camera_interface) StdoutLine: {'line': b'[ 80%] Built target camera_interface__rosidl_typesupport_c\n'}
+[2.219831] (-) TimerEvent: {}
+[2.222787] (camera_interface) StdoutLine: {'line': b'[ 80%] Built target camera_interface\n'}
+[2.310609] (camera_interface) StdoutLine: {'line': b'[ 82%] Built target camera_interface__py\n'}
+[2.319988] (-) TimerEvent: {}
+[2.421558] (-) TimerEvent: {}
+[2.431183] (camera_interface) StdoutLine: {'line': b'[ 91%] Built target camera_interface__python\n'}
+[2.521790] (-) TimerEvent: {}
+[2.544771] (camera_interface) StdoutLine: {'line': b'[ 97%] Built target camera_interface__rosidl_typesupport_c__pyext\n'}
+[2.545823] (camera_interface) StdoutLine: {'line': b'[100%] Built target camera_interface__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.620150] (camera_interface) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[2.622737] (-) TimerEvent: {}
+[2.655156] (camera_interface) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.657910] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/rosidl_interfaces/camera_interface\n'}
+[2.658509] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_c.so\n'}
+[2.659471] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/library_path.sh\n'}
+[2.659929] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/library_path.dsv\n'}
+[2.660730] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_cpp.so\n'}
+[2.661987] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface\n'}
+[2.662683] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg\n'}
+[2.663136] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.664892] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_fastrtps_c.h\n'}
+[2.665900] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_fastrtps_c.h\n'}
+[2.666366] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_fastrtps_c.h\n'}
+[2.667276] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_fastrtps_c.so\n'}
+[2.668364] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface\n'}
+[2.669119] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg\n'}
+[2.669781] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__struct.h\n'}
+[2.670638] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__struct.h\n'}
+[2.671529] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__functions.h\n'}
+[2.672706] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles.h\n'}
+[2.673240] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__functions.c\n'}
+[2.673779] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.h\n'}
+[2.674228] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.h\n'}
+[2.674893] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__functions.h\n'}
+[2.675792] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.676345] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__struct.h\n'}
+[2.676987] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate.h\n'}
+[2.677422] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera.h\n'}
+[2.678009] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__functions.c\n'}
+[2.678702] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.h\n'}
+[2.679302] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__functions.h\n'}
+[2.679737] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__functions.c\n'}
+[2.680316] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_generator_c.so\n'}
+[2.680855] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface\n'}
+[2.681260] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg\n'}
+[2.681717] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.682170] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.682668] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.683080] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.683474] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/dds_fastrtps\n'}
+[2.683921] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.684432] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface\n'}
+[2.684836] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg\n'}
+[2.685233] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate.hpp\n'}
+[2.685658] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__traits.hpp\n'}
+[2.686131] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles.hpp\n'}
+[2.686547] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__traits.hpp\n'}
+[2.686946] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera.hpp\n'}
+[2.687344] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__struct.hpp\n'}
+[2.687785] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__traits.hpp\n'}
+[2.688221] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__struct.hpp\n'}
+[2.688665] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__struct.hpp\n'}
+[2.689028] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface\n'}
+[2.689445] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg\n'}
+[2.689886] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.690265] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_introspection_c.h\n'}
+[2.690626] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.c\n'}
+[2.690998] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.c\n'}
+[2.691446] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_introspection_c.h\n'}
+[2.691848] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_introspection_c.h\n'}
+[2.692351] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.c\n'}
+[2.692768] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_introspection_c.so\n'}
+[2.693131] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface\n'}
+[2.693582] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg\n'}
+[2.693985] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__type_support.cpp\n'}
+[2.694378] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/obstacles__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.694740] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__type_support.cpp\n'}
+[2.695101] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.695543] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/camera__type_support.cpp\n'}
+[2.695938] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/include/camera_interface/msg/nodeupdate__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.696355] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__rosidl_typesupport_introspection_cpp.so\n'}
+[2.696757] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/pythonpath.sh\n'}
+[2.697114] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/pythonpath.dsv\n'}
+[2.697482] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/__init__.py\n'}
+[2.722942] (-) TimerEvent: {}
+[2.823855] (-) TimerEvent: {}
+[2.826206] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg\n'}
+[2.827728] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_camera_s.c\n'}
+[2.828460] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_camera.py\n'}
+[2.829378] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_obstacles_s.c\n'}
+[2.830037] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_nodeupdate_s.c\n'}
+[2.830548] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/__init__.py\n'}
+[2.830989] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_obstacles.py\n'}
+[2.831409] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/msg/_nodeupdate.py\n'}
+[2.832088] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/camera_interface_s__rosidl_typesupport_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[2.832657] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages/camera_interface/camera_interface_s__rosidl_typesupport_fastrtps_c.cpython-36m-aarch64-linux-gnu.so\n'}
+[2.834382] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/libcamera_interface__python.so\n'}
+[2.835344] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Camera.idl\n'}
+[2.836008] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Obstacles.idl\n'}
+[2.837374] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Nodeupdate.idl\n'}
+[2.838152] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Camera.msg\n'}
+[2.838800] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Obstacles.msg\n'}
+[2.839673] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/msg/Nodeupdate.msg\n'}
+[2.840556] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/package_run_dependencies/camera_interface\n'}
+[2.841504] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/parent_prefix_path/camera_interface\n'}
+[2.842479] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/ament_prefix_path.sh\n'}
+[2.843158] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/ament_prefix_path.dsv\n'}
+[2.843941] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/path.sh\n'}
+[2.844634] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/environment/path.dsv\n'}
+[2.845094] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.bash\n'}
+[2.845537] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.sh\n'}
+[2.846021] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.zsh\n'}
+[2.846526] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/local_setup.dsv\n'}
+[2.847018] (camera_interface) StdoutLine: {'line': b'-- Installing: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/package.dsv\n'}
+[2.847487] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/ament_index/resource_index/packages/camera_interface\n'}
+[2.847965] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/rosidl_cmake-extras.cmake\n'}
+[2.848539] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.848998] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.849464] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.849865] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/camera_interfaceConfig.cmake\n'}
+[2.850316] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/cmake/camera_interfaceConfig-version.cmake\n'}
+[2.850744] (camera_interface) StdoutLine: {'line': b'-- Up-to-date: /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/share/camera_interface/package.xml\n'}
+[2.865960] (camera_interface) CommandEnded: {'returncode': 0}
+[2.924301] (-) TimerEvent: {}
+[3.027957] (-) TimerEvent: {}
+[3.130337] (-) TimerEvent: {}
+[3.231790] (-) TimerEvent: {}
+[3.332983] (-) TimerEvent: {}
+[3.346008] (camera_interface) JobEnded: {'identifier': 'camera_interface', 'rc': 0}
+[3.355299] (camera_controller) JobStarted: {'identifier': 'camera_controller'}
+[3.433789] (-) TimerEvent: {}
+[3.535741] (-) TimerEvent: {}
+[3.636967] (-) TimerEvent: {}
+[3.738012] (-) TimerEvent: {}
+[3.839076] (-) TimerEvent: {}
+[3.940123] (-) TimerEvent: {}
+[4.041278] (-) TimerEvent: {}
+[4.142274] (-) TimerEvent: {}
+[4.243345] (-) TimerEvent: {}
+[4.344509] (-) TimerEvent: {}
+[4.445587] (-) TimerEvent: {}
+[4.547187] (-) TimerEvent: {}
+[4.649695] (-) TimerEvent: {}
+[4.751110] (-) TimerEvent: {}
+[4.852763] (-) TimerEvent: {}
+[4.954166] (-) TimerEvent: {}
+[5.055211] (-) TimerEvent: {}
+[5.156196] (-) TimerEvent: {}
+[5.257261] (-) TimerEvent: {}
+[5.358247] (-) TimerEvent: {}
+[5.460194] (-) TimerEvent: {}
+[5.561601] (-) TimerEvent: {}
+[5.662654] (-) TimerEvent: {}
+[5.763682] (-) TimerEvent: {}
+[5.864839] (-) TimerEvent: {}
+[5.965878] (-) TimerEvent: {}
+[6.066966] (-) TimerEvent: {}
+[6.129044] (camera_controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/camera_controller', 'build', '--build-base', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/build', 'install', '--prefix', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller', '--record', '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/install.log', '--single-version-externally-managed'], 'cwd': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/src/camera_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'PYTHONIOENCODING': 'utf-8', 'HOSTNAME': 'xavier-desktop', 'LD_LIBRARY_PATH': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib:/home/zed_workspace/install/camera_interface/lib:/usr/lib/aarch64-linux-gnu/gazebo-9/plugins:/opt/ros/eloquent/opt/yaml_cpp_vendor/lib:/opt/ros/eloquent/lib/aarch64-linux-gnu:/opt/ros/eloquent/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib', 'SHLVL': '1', 'OLDPWD': '/root/Luis/camera_zed/Camera_Depth', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install:/home/zed_workspace/install', 'ROS_DISTRO': 'eloquent', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/eloquent/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_ROOT': '/opt/ros/eloquent', 'AMENT_PREFIX_PATH': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface:/home/zed_workspace/install/camera_controller:/home/zed_workspace/install/camera_interface:/opt/ros/eloquent', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller', 'PYTHONPATH': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/home/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/home/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/opt/ros/eloquent/lib/python3.6/site-packages', 'TZ': 'Europe/Paris', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface:/home/zed_workspace/install/camera_interface'}, 'shell': False}
+[6.167186] (-) TimerEvent: {}
+[6.268919] (-) TimerEvent: {}
+[6.372162] (-) TimerEvent: {}
+[6.475505] (-) TimerEvent: {}
+[6.576473] (-) TimerEvent: {}
+[6.678591] (-) TimerEvent: {}
+[6.779517] (-) TimerEvent: {}
+[6.880419] (-) TimerEvent: {}
+[6.981339] (-) TimerEvent: {}
+[7.082792] (-) TimerEvent: {}
+[7.161551] (camera_controller) StdoutLine: {'line': b'running egg_info\n'}
+[7.163929] (camera_controller) StdoutLine: {'line': b'writing ../../build/camera_controller/camera_controller.egg-info/PKG-INFO\n'}
+[7.164978] (camera_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/camera_controller/camera_controller.egg-info/dependency_links.txt\n'}
+[7.165991] (camera_controller) StdoutLine: {'line': b'writing entry points to ../../build/camera_controller/camera_controller.egg-info/entry_points.txt\n'}
+[7.166809] (camera_controller) StdoutLine: {'line': b'writing requirements to ../../build/camera_controller/camera_controller.egg-info/requires.txt\n'}
+[7.167391] (camera_controller) StdoutLine: {'line': b'writing top-level names to ../../build/camera_controller/camera_controller.egg-info/top_level.txt\n'}
+[7.173936] (camera_controller) StdoutLine: {'line': b"reading manifest file '../../build/camera_controller/camera_controller.egg-info/SOURCES.txt'\n"}
+[7.179924] (camera_controller) StdoutLine: {'line': b"writing manifest file '../../build/camera_controller/camera_controller.egg-info/SOURCES.txt'\n"}
+[7.180651] (camera_controller) StdoutLine: {'line': b'running build\n'}
+[7.181053] (camera_controller) StdoutLine: {'line': b'running build_py\n'}
+[7.182580] (camera_controller) StdoutLine: {'line': b'copying camera_controller/Zed_node.py -> /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/build/lib/camera_controller\n'}
+[7.183024] (-) TimerEvent: {}
+[7.184537] (camera_controller) StdoutLine: {'line': b'running install\n'}
+[7.185513] (camera_controller) StderrLine: {'line': b'/usr/local/lib/python3.6/dist-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.186051] (camera_controller) StderrLine: {'line': b'  setuptools.SetuptoolsDeprecationWarning,\n'}
+[7.186705] (camera_controller) StdoutLine: {'line': b'running install_lib\n'}
+[7.190002] (camera_controller) StdoutLine: {'line': b'copying /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/build/lib/camera_controller/Zed_node.py -> /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages/camera_controller\n'}
+[7.192497] (camera_controller) StdoutLine: {'line': b'byte-compiling /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages/camera_controller/Zed_node.py to Zed_node.cpython-36.pyc\n'}
+[7.196682] (camera_controller) StdoutLine: {'line': b'running install_data\n'}
+[7.198346] (camera_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.204544] (camera_controller) StdoutLine: {'line': b"removing '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages/camera_controller-0.0.0-py3.6.egg-info' (and everything under it)\n"}
+[7.205770] (camera_controller) StdoutLine: {'line': b'Copying ../../build/camera_controller/camera_controller.egg-info to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages/camera_controller-0.0.0-py3.6.egg-info\n'}
+[7.209609] (camera_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[7.283345] (camera_controller) StdoutLine: {'line': b'Installing Zed_node script to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/camera_controller\n'}
+[7.284298] (-) TimerEvent: {}
+[7.284959] (camera_controller) StdoutLine: {'line': b'Installing camera_node script to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/camera_controller\n'}
+[7.285779] (camera_controller) StdoutLine: {'line': b'Installing distance_cells script to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/camera_controller\n'}
+[7.286300] (camera_controller) StdoutLine: {'line': b'Installing distance_move script to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/camera_controller\n'}
+[7.287074] (camera_controller) StdoutLine: {'line': b"writing list of installed files to '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/install.log'\n"}
+[7.393035] (camera_controller) CommandEnded: {'returncode': 0}
+[7.396841] (-) TimerEvent: {}
+[7.430642] (camera_controller) JobEnded: {'identifier': 'camera_controller', 'rc': 0}
+[7.438651] (-) EventReactorShutdown: {}

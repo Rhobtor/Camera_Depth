@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from camera_interface/msg/Obstacles.msg
+// generated code does not contain a copyright notice
+
+#include "camera_interface/msg/Camera.idl"
+
+module camera_interface {
+  module msg {
+    struct Obstacles {
+      double angle_increment;
+
+      sequence<camera_interface::msg::Camera> objects;
+    };
+  };
+};

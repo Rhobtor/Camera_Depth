@@ -1,0 +1,29 @@
+[2.792s] Invoking command in '/root/Luis/camera_zed/Camera_Depth/zed_workspace/src/camera_controller': LD_LIBRARY_PATH=/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib:/home/zed_workspace/install/camera_interface/lib:/usr/lib/aarch64-linux-gnu/gazebo-9/plugins:/opt/ros/eloquent/opt/yaml_cpp_vendor/lib:/opt/ros/eloquent/lib/aarch64-linux-gnu:/opt/ros/eloquent/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/home/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/home/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/opt/ros/eloquent/lib/python3.6/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_controller build --build-base /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/build install --prefix /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller --record /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/install.log --single-version-externally-managed
+[3.807s] running egg_info
+[3.809s] writing ../../build/camera_controller/camera_controller.egg-info/PKG-INFO
+[3.810s] writing dependency_links to ../../build/camera_controller/camera_controller.egg-info/dependency_links.txt
+[3.811s] writing entry points to ../../build/camera_controller/camera_controller.egg-info/entry_points.txt
+[3.812s] writing requirements to ../../build/camera_controller/camera_controller.egg-info/requires.txt
+[3.812s] writing top-level names to ../../build/camera_controller/camera_controller.egg-info/top_level.txt
+[3.819s] reading manifest file '../../build/camera_controller/camera_controller.egg-info/SOURCES.txt'
+[3.825s] writing manifest file '../../build/camera_controller/camera_controller.egg-info/SOURCES.txt'
+[3.826s] running build
+[3.826s] running build_py
+[3.827s] copying camera_controller/Zed_node.py -> /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/build/lib/camera_controller
+[3.830s] running install
+[3.830s] /usr/local/lib/python3.6/dist-packages/setuptools/command/install.py:37: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.831s]   setuptools.SetuptoolsDeprecationWarning,
+[3.832s] running install_lib
+[3.835s] copying /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/build/lib/camera_controller/Zed_node.py -> /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages/camera_controller
+[3.838s] byte-compiling /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages/camera_controller/Zed_node.py to Zed_node.cpython-36.pyc
+[3.842s] running install_data
+[3.843s] running install_egg_info
+[3.850s] removing '/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages/camera_controller-0.0.0-py3.6.egg-info' (and everything under it)
+[3.851s] Copying ../../build/camera_controller/camera_controller.egg-info to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages/camera_controller-0.0.0-py3.6.egg-info
+[3.855s] running install_scripts
+[3.928s] Installing Zed_node script to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/camera_controller
+[3.930s] Installing camera_node script to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/camera_controller
+[3.931s] Installing distance_cells script to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/camera_controller
+[3.931s] Installing distance_move script to /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/camera_controller
+[3.932s] writing list of installed files to '/root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/install.log'
+[4.040s] Invoked command in '/root/Luis/camera_zed/Camera_Depth/zed_workspace/src/camera_controller' returned '0': LD_LIBRARY_PATH=/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib:/home/zed_workspace/install/camera_interface/lib:/usr/lib/aarch64-linux-gnu/gazebo-9/plugins:/opt/ros/eloquent/opt/yaml_cpp_vendor/lib:/opt/ros/eloquent/lib/aarch64-linux-gnu:/opt/ros/eloquent/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib PYTHONPATH=/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/home/zed_workspace/install/camera_controller/lib/python3.6/site-packages:/home/zed_workspace/install/camera_interface/lib/python3.6/site-packages:/opt/ros/eloquent/lib/python3.6/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_controller build --build-base /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/build install --prefix /root/Luis/camera_zed/Camera_Depth/zed_workspace/install/camera_controller --record /root/Luis/camera_zed/Camera_Depth/zed_workspace/build/camera_controller/install.log --single-version-externally-managed

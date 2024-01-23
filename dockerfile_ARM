@@ -61,9 +61,9 @@ WORKDIR /usr/local/zed
 RUN git clone https://github.com/stereolabs/zed-python-api.git
 WORKDIR /usr/local/zed
 
-WORKDIR /home/asv_workspace
+WORKDIR /home/zed_workspace
 
-COPY ./asv_workspace /home/asv_workspace
+COPY ./zed_workspace /home/zed_workspace
 
 RUN /bin/bash -c "source /opt/ros/eloquent/setup.bash; colcon build"
 #por ahora no

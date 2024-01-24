@@ -145,10 +145,7 @@ RUN wget https://www.python.org/ftp/python/3.9.10/Python-3.9.10.tgz && \
     make -j$(nproc) && \
     make install && \
     cd .. && \
-    rm -rf Python-3.9.10* && \
-    apt-get purge -y --auto-remove \
-        build-essential libssl-dev zlib1g-dev libbz2-dev \
-        libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
+    rm -rf Python-3.9.10* 
 
 # Update pip and setuptools
 RUN python3.9 -m pip install --upgrade pip setuptools
@@ -187,9 +184,15 @@ RUN wget https://download.stereolabs.com/zedsdk/4.0/whl/linux_aarch64/pyzed-4.0-
 RUN python3 -m pip install --ignore-installed /usr/local/zed/pyzed-4.0-cp39-cp39-linux_aarch64.whl
 
 # Needed to work with pyzed on ARM
-ENV OPENBLAS_CORETYPE=ARMV8 
+ENV OPENBLAS_CORETYPE=ARMV8
 
-RUN git clone https://github.com/ultralytics/yolov5
-WORKDIR /usr/local/zed/yolov5
+WORKDIR /home/zed_workspace
+COPY ./zed_workspace /home/zed_workspace
+RUN /bin/bash -c "source /opt/ros/eloquent/setup.bash"
 
-RUN pip3 install -U -r requirements.txt
+# WORKDIR /home/zed_workspace/src/camera_controller/camera_controller
+# RUN git clone https://github.com/ultralytics/yolov5
+
+# WORKDIR /home/zed_workspace/src/camera_controller/camera_controller/yolov5
+
+# RUN pip3 install -U -r requirements.txt
